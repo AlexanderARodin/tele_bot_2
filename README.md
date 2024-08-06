@@ -1,5 +1,5 @@
 # tele_bot_2
-
+pet-bot for Telegram
 
 
 
