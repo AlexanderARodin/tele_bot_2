@@ -1,9 +1,10 @@
 help:
 	@cat Makefile
 
+all: check test release
+
 edit:
 	@nvim ./src/main.rs
-
 git.pushall: git.commitall
 	@git push
 git.commitall: git.addall
@@ -15,12 +16,8 @@ check:
 	@cargo rustc -- -Awarnings
 test:
 	@cargo test
-
-all: test release
-
 release:
 	@cargo rustc --release -- -C prefer-dynamic
-
 run: 
 	@cargo run
 
